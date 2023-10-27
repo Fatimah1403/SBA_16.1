@@ -4,19 +4,33 @@ const log = console.log;
 // const emailD = document.getElementById("email").value;
 // const passwordD = document.getElementById("password").value
 const form = document.getElementById("form");
-const email = document.forms["form"]["email"];
-const password = document.forms["form"]["password"];
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+
+const email_error = "Please fill up your Email";
+const pass_error = "Please fill up your Password";
+
 
 const validateEmail = () => {
     let emailVal = email.value;
-   let emailPattern = /^[a-zA-Z0-9._-] + @[a-zA-z0-9] +\.[a-A-Z]{2,4}$/;
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-z0-9]+\.[a-A-Z]{2,4}$/;
+    let msg = []
 
+   if (emailVal === "" || emailVal === null) {
+    msg.push("Email field is required")
+   }
    if (!emailPattern.test(emailVal)) {
     alert("Please, enter a valid email");
     email.focus();
     return false;
    }
-   return true;  
+   if (emailVal.length < 9) {
+    email.style.border = "1px solid red";
+    email_error.style.display = "block";
+    email.focus();
+    return false
+   }
+   return true;
 };
 //-- validate password
 const validatePassword = () => {

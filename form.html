@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <script src="./index.js"></script>
     <div class="box">
         <span class="borderLine"></span>
-        <form class="login_form" method="POST" name="form" onsubmit="return validateForm()">
+        <form action="/index.html" class="login_form" method="POST" name="form" onsubmit="return validateForm()">
             <h2>Log in</h2>
             <div class="inputBox">
                 <input autocomplete="off" type="text" id="email" name="email" required="required">
@@ -19,7 +18,7 @@
                 <i></i>
             </div>
             <div class="inputBox">
-                <input type="password" id="password" name="password" required="required">
+                <input autocomplete="off" type="password" id="password" name="password" required="required">
                 <!-- <div class="email_error">Please fill up your Password</div> -->
 
                 <span>Password</span>
@@ -30,9 +29,12 @@
                 <a href="#">Sign Up</a>
             </div>
             <!-- <input type="submit" value="Login"> -->
-            <button id="loginButton">Login</button>
+            <button id="loginButton" type="submit">Login</button>
             <!-- <a href="index.html" class="button">Login</a> -->
         </form>
     </div>
+    <!-- <script src="./index.js"></script> -->
+    <script src="./form.js"></script>
+
 </body>
 </html>
