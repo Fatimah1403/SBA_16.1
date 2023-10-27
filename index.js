@@ -1,11 +1,11 @@
 //-------Form validation---------
 const log = console.log;
 
-const emailD = document.getElementById("email").value;
-const passwordD = document.getElementById("password").value
+// const emailD = document.getElementById("email").value;
+// const passwordD = document.getElementById("password").value
 const form = document.getElementById("form");
-const email = form.elements["email"];
-const password = form.elements["password"];
+const email = document.forms["form"]["email"];
+const password = document.forms["form"]["password"];
 
 const validateEmail = () => {
     let emailVal = email.value;
@@ -41,30 +41,34 @@ const validatePassword = () => {
     }
     return true;
 };
-
-const addValidationEventListener = (elem, validateFunction) => {
-    elem.addEventListener("submit", (event) => {
-        if(!validateFunction()) {
-            event.preventDefault();
-        } else {
-            let passVal = password.value;
-              let emailVal = email.value;
-            if (authenticateUser(passVal, emailVal)) {
-                window.location.href = "index.html"
-            } else {
-                alert("Authentication failed. Please check your credentials.")
-            }
-        }
-    });
-};
-function authenticateUser(emailD, passwordD) {
-    if (emailD === "emailD" && passwordD === "passwordD") {
-        return true;
-    } else {
-        return false
+const validateForm = () => {
+    if (!validateEmail() || !validatePassword()) {
+        // Validation failed, prevent form submission
+        return false;
     }
+    return true; // Form will submit
+};
+form.addEventListener("submit", (event) => {
+    if (!validateForm()) {
+        event.preventDefault(); // Prevent form submission if validation fails
+    }
+});
+// const addValidationEventListener = (elem, validateFunction) => {
+//     elem.addEventListener("submit", (event) => {
+//         if(!validateFunction()) {
+//             event.preventDefault();
+//         } 
+//     });
+// };
+// // function authenticateUser(emailD, passwordD) {
+// //     if (emailD === "emailD" && passwordD === "passwordD") {
+// //         return true;
+// //     } else {
+// //         return false
+// //     }
 
-}
-// Adding event listener for both email and password Validation.
-addValidationEventListener(form, validateEmail);
-addValidationEventListener(form, validatePassword);
+// // }
+// // Adding event listener for both email and password Validation.
+// addValidationEventListener(form, validateEmail);
+// addValidationEventListener(form, validatePassword);
+

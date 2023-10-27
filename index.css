@@ -180,11 +180,28 @@ body {
 .box form .links a:nth-child(2) {
     color: #fff;
 }
-.box form input[type="submit"] {
+/* .box form [type="submit"] {
     border: none;
     outline: none;
     padding: 9px 25px;
     background: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+} */
+/* .box form input[type="submit"]:hover {
+    background: #1B210D;
+} */
+.box form button {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    text-decoration: none;
     cursor: pointer;
     font-size: 0.9em;
     border-radius: 20px;
@@ -192,6 +209,6 @@ body {
     width: 100px;
     margin-top: 10px;
 }
-.box form input[type="submit"]:hover {
+.box form button:hover {
     background: #1B210D;
 }

@@ -10,15 +10,18 @@
     <script src="./index.js"></script>
     <div class="box">
         <span class="borderLine"></span>
-        <form id="form">
+        <form class="login_form" method="POST" name="form" onsubmit="return validateForm()">
             <h2>Log in</h2>
             <div class="inputBox">
-                <input type="text" id="email" name="email" required="required">
+                <input autocomplete="off" type="text" id="email" name="email" required="required">
+                <!-- <div class="email_error">Please fill up your Email</div> -->
                 <span>Email</span>
                 <i></i>
             </div>
             <div class="inputBox">
                 <input type="password" id="password" name="password" required="required">
+                <!-- <div class="email_error">Please fill up your Password</div> -->
+
                 <span>Password</span>
                 <i></i>
             </div>
@@ -26,7 +29,9 @@
                 <a href="#">Forgot Password</a>
                 <a href="#">Sign Up</a>
             </div>
-            <input type="submit" value="Login">
+            <!-- <input type="submit" value="Login"> -->
+            <button id="loginButton">Login</button>
+            <!-- <a href="index.html" class="button">Login</a> -->
         </form>
     </div>
 </body>
