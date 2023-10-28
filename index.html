@@ -4,57 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My to-do app</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="top">
-        <div class="logo">FatHas</div>
-        <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">About</a>
-            <a href="#">Location</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="search">
-            <i class="fa-solid fa-search"></i>
-            <i class="fa-solid fa-bars"></i>
+    <div class="box">
+        <span class="borderLine"></span>
+        <form action="/index.html" id="form" method="POST" name="form" onsubmit="return validateForm()">
+            <h2>Log in</h2>
+            <div class="inputBox">
+                <input autocomplete="off" type="text" id="email" name="email" required="required">
+                <!-- <div class="email_error">Please fill up your Email</div> -->
+                <span>Email</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input autocomplete="off" type="password" id="password" name="password" required="required">
+                <!-- <div class="email_error">Please fill up your Password</div> -->
 
-        </div>
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password</a>
+                <a href="#">Sign Up</a>
+            </div>
+            <!-- <input type="submit" value="Login"> -->
+            <button id="loginButton" type="submit">Login</button>
+            <!-- <a href="index.html" class="button">Login</a> -->
+        </form>
     </div>
-    <div class="heading">
-        <div class="left">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <h1>Lorem, ipsum dolor.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <button>Check our Menu</button>
-        </div>
-        <div class="right">
-            
-        </div>
-        <div class="socialmedia">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-twitter"></i>
-        </div>
-    </div>
-    <div class="bottom">
-        <div class="menu">
-            <div id="food1"></div>
-            <div id="food2"></div>
-
-        </div>
-
-    </div>
-   
-    <script src="./main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <!-- <script src="./form.js"></script> -->
 
 </body>
 </html>
