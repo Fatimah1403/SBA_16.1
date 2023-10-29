@@ -24,7 +24,6 @@ body {
 .nav {
     position: relative;
     right: 800px;
-    /* justify-content: center; */
 }
 a {
     padding: 5px 15px;
@@ -141,4 +140,18 @@ a:hover {
 .menu {
     display: flex;
     margin: 0px 100px;
+}
+
+/**********media responsiveness******** */
+@media screen and (max-width: 768) {
+    .nav {
+        flex-direction: column; /* Stack links vertically for smaller screens */
+        justify-content: center; 
+    }
+    .heading {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        /* margin-left: -500px; */
+    }
 }
