@@ -50,4 +50,56 @@ $(".next-menus").bind("click", function(event) {
 });
 
 // big screen responsiveness
-// when the back and next icon is clicked, it shoud move to the next
+//working on the input search bar
+// Get references to the input field and the results container
+const input = document.getElementById("input");
+const searchButton = document.querySelector(".search-btn");
+const resultsContainer = document.querySelector(".search-results");
+
+searchButton.addEventListener("click", function () {
+    performSearch(input.value.toLowerCase());
+});
+// Add an input event listener to the input field
+input.addEventListener("input", function () {
+    // Get the search query from the input field
+    const query = input.value.toLowerCase();
+
+    // Perform your search logic here (e.g., search through an array of items)
+    const searchResults = performSearch(query);
+
+    // Display the search results
+    displaySearchResults(searchResults);
+});
+
+function performSearch(query) {
+    
+    const items = [
+        "Amala and Abula",
+        "Plantain and Egg",
+        "Eba and Egunsi",
+        "Jollof Rice with Chicken",
+        "Fried Rice",
+        "Roasted Plantain",
+        "Tea",
+    ];
+
+    // Filter items based on the query
+    return items.filter((item) => item.toLowerCase().includes(query));
+    resultsContainer.textContent = "Searching for: " + query;
+}
+
+// Display search results
+function displaySearchResults(results) {
+    // Clear the previous results
+    resultsContainer.innerHTML = "";
+
+    if (results.length === 0) {
+        resultsContainer.innerHTML = "<p>No results found.</p>";
+    } else {
+        results.forEach((result) => {
+            const resultItem = document.createElement("p");
+            resultItem.textContent = result;
+            resultsContainer.appendChild(resultItem);
+        });
+    }
+}

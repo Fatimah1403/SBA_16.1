@@ -1,0 +1,144 @@
+:root {
+    --primaryColor: #4032a8;
+    --secondaryColor: #a89632;
+    --whiteColor: #ffffff;
+    --tintBlueColor: #33adff;
+    --blackColor: #222222;
+    --softBlueColor: #3296a8;
+    --darkBlueColor: #2550BE;
+    --silverColor: #C0C0C0;
+    --greyColor: #f5f5f5;
+    --yellowColor:#e6b800;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--darkBlueColor)
+}
+
+#navbar {
+    background-color: rgb(15, 13, 13);
+}
+
+#QuickFood-logo {
+    margin: 60px 480px;
+}
+
+.cart {
+    color: white;
+    float: right;
+    margin-top: -130px;
+    margin-right: 20px;
+    height: 40px;
+}
+
+.cart-txt {
+    color: whitesmoke;
+    float: right;
+    margin-top: -120px;
+    font-family: 'Roboto Mono', monospace;
+    margin-right: 10px;
+}
+
+.mobile {
+    color: white;
+    float: left;
+    margin-top: -130px;
+    height: 43px;
+    margin-left: 10px;
+}
+
+.sub-txt {
+    margin-top: 10px;
+    color: gray;
+}
+
+.sub-txt:hover {
+    color: orange;
+}
+
+.num-txt {
+    color: whitesmoke;
+    float: left;
+    margin-top: -120px;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 20px;
+}
+
+.num {
+    margin-left: 30px;
+}
+
+#content {
+    overflow: hidden;
+    background-color: transparent;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+#li {
+    float: left;
+    font-family: 'Pirata One', cursive;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+#li a:hover {
+    color: orange;
+}
+
+#li a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 50px;
+}
+
+.active {
+    margin-left: 300px;
+    border-bottom: 1px solid rgb(255, 136, 0);
+}
+
+#navbar {
+    padding-bottom: 10px;
+}
+
+#user-icon {
+    color: rgb(25, 0, 255);
+    margin-left: 46%;
+    margin-top: 40px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 98%;
+    padding: 12px;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 26px;
+    font-family: 'Righteous', cursive;
+}
+
+input[type=submit] {
+    background-color: var(--tintBlueColor);
+    border: 2px solid green;
+    font-size: 27px;
+    padding: 6px;
+    font-family: 'Changa', sans-serif;
+    border-radius: 7px;
+    margin-left: 80px;
+    transition: 0.5s ease-in-out;
+}
+
+#submit:hover {
+    background-color: transparent;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/styles/contact.css">
+
+</head>
+<body>
+    <div id="navbar" class="navbar">
+        <!-- <img src="images/logo" alt="QuckFood" id="QuickFood-logo"> -->
+        <div class="cart-txt">
+            <h2 class="cart-text">$0.00
+            </h2>
+            <p class="sub-txt">0 Items in the cart</p>
+        </div>
+        <img src="images/cart.png" alt="cart" class="cart">
+        <img src="images/mobile.png" alt="call-us" class="mobile">
+        <div class="num-txt">
+            <h2 class="num">+215 456 15 15
+            </h2>
+            <p class="sub-txt">8:00 am - 11:30pm</p>
+        </div>
+        <ul id="content">
+            <li id="li" class="active"><a href="index.html">Home</a></li>
+            <li id="li"><a href="menu.html">Menu</a></li>
+            <li id="li"><a href="about.html">About</a></li>
+                </a></li>
+            <li id="li"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <i class="fas fa-user fa-7x" id="user-icon"></i>
+    <div class="container">
+        <form action="">
+            <label for="fname">Write your First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+            <label for="lname">Write your Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="country">Select your Country</label>
+            <select id="country" name="country" required>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+          </select>
+
+            <label for="subject">Subject</label>
+            <textarea required id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit" id="submit" onclick="myFunction()">
+            <script>
+                function myFunction() {
+                    alert("Message sent")
+                }
+            </script>
+        </form>
+    </div>
+    
+</body>
+</html>

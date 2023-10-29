@@ -56,18 +56,19 @@ const validatePassword = () => {
     return true;
 };
 const validateForm = () => {
-    if (!validateEmail() || !validatePassword()) {
+    if (!validateEmail() && !validatePassword()) {
         // Validation failed, prevent form submission
         return false;
     }
-    return true; // Form will submit
+    //return true; // Form will submit
+    return validateEmail() &&validatePassword();
 };
 form.addEventListener("submit", (event) => {
     if (!validateForm()) {
         event.preventDefault(); // Prevent form submission if validation fails
     } else {
         // form is validateEmail, redirect to HTMLModElement.html
-        window.location.href = "./home.html"
+        window.location.href = "home.html"
     }
 });
 // const addValidationEventListener = (elem, validateFunction) => {

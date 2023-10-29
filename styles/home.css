@@ -143,15 +143,52 @@ a:hover {
 }
 
 /**********media responsiveness******** */
-@media screen and (max-width: 768) {
+@media screen and (max-width: 768px) {
     .nav {
-        flex-direction: column; /* Stack links vertically for smaller screens */
-        justify-content: center; 
+        flex-direction: column;
+        justify-content: center;
+        right: 0;
+    }
+    .nav a {
+        text-align: center;
+        padding: 10px 0;
     }
     .heading {
         flex-direction: column;
         text-align: center;
         padding: 20px;
-        /* margin-left: -500px; */
+        align-items: center;
+        right: 0;
+    }
+    .left {
+        margin-right: 0;
+    }
+    .right {
+        width: 100%; 
+        height: auto;
+        margin-right: 0;
+    }
+    .socialmedia {
+        flex-direction: row;
+        justify-content: space-around;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+    }
+    #food1, #food2, #food3, #food4 {
+        width: 100px;
+        height: 100px;
+        margin: 0px 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .left button {
+        margin-top: 100px;
+    }
+    #foods {
+        display: none;
     }
 }
