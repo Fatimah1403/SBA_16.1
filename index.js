@@ -65,6 +65,9 @@ const validateForm = () => {
 form.addEventListener("submit", (event) => {
     if (!validateForm()) {
         event.preventDefault(); // Prevent form submission if validation fails
+    } else {
+        // form is validateEmail, redirect to HTMLModElement.html
+        window.location.href = "./home.html"
     }
 });
 // const addValidationEventListener = (elem, validateFunction) => {
