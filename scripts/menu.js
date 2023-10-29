@@ -48,3 +48,6 @@ $(".next-menus").bind("click", function(event) {
         scrollLeft: "+=" + stepFilter + "px"
     });
 });
+
+// big screen responsiveness
+// when the back and next icon is clicked, it shoud move to the next
